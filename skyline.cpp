@@ -58,6 +58,7 @@ int main(){
     return 0;
 }
 /*
+Input:
 8
 1 11
 2 6
