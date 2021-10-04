@@ -1,4 +1,4 @@
 *.out
 *.xml
 *.iml
-/.idea/.gitignore
+*.idea
