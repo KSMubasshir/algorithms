@@ -3,6 +3,7 @@ Collections of Different Algorithms implemented in c++
 ## Algorithms Implemented
 * Skyline
 * Kruskal's Algorithm to find Minimum Spanning Tree
+* Set Cover Problem
 ## Description
 ### Skyline
 Given n rectangular buildings in a 2-dimensional city, computes the skyline of these buildings, eliminating hidden lines. 
@@ -31,4 +32,32 @@ Kruskal’s Algorithm builds the spanning tree by adding edges one by one into a
 * Start adding edges to the MST from the edge with the smallest weight until the edge of the largest weight.
 * Only add edges which doesn't form a cycle , edges which connect only disconnected components.
 
+#### Set Cover Problem
+Given a universe U of n elements, a collection of subsets of U say S = {S1, S2…,Sm} where every subset Si has an associated cost. Find a minimum cost subcollection of S that covers all elements of U.
+##### Input
+  U = {1,2,3,4,5}
+   S = {S1,S2,S3}
+   
+   S1 = {4,1,3},    Cost(S1) = 5
+   S2 = {2,5},      Cost(S2) = 10
+   S3 = {1,4,3,2},  Cost(S3) = 3
+
+##### Output
+Minimum cost of set cover is 13 and set cover is {S2, S3}
+
+There are two possible set covers {S1, S2} with cost 15
+and {S2, S3} with cost 13.
+
+##### Approximate Greedy Algorithm:
+Let U be the universe of elements, {S1, S2, … Sm} be collection of subsets of U and Cost(S1), C(S2), … Cost(Sm) be costs of subsets.
+
+1. Let I represents set of elements included so far.  Initialize I = {}
+
+2. Do following while I is not same as U.
+    a. Find the set Si in {S1, S2, ... Sm} whose cost effectiveness is 
+       smallest, i.e., the ratio of cost C(Si) and number of newly added 
+       elements is minimum. 
+       Basically we pick the set for which following value is minimum.
+           Cost(Si) / |Si - I|
+    b. Add elements of above picked Si to I, i.e.,  I = I U Si
 
