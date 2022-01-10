@@ -3,6 +3,7 @@ Collections of Different Algorithms implemented in c++
 ## Algorithms Implemented
 * Skyline
 * Kruskal's Algorithm to find Minimum Spanning Tree
+* Set Cover Problem
 ## Description
 ### Skyline
 Given n rectangular buildings in a 2-dimensional city, computes the skyline of these buildings, eliminating hidden lines. 
@@ -31,4 +32,21 @@ Kruskal’s Algorithm builds the spanning tree by adding edges one by one into a
 * Start adding edges to the MST from the edge with the smallest weight until the edge of the largest weight.
 * Only add edges which doesn't form a cycle , edges which connect only disconnected components.
 
+#### Set Cover Problem
+Given a universe U of n elements, a collection of subsets of U say S = {S1, S2…,Sm} where every subset Si has an associated cost. Find a minimum cost subcollection of S that covers all elements of U.
+##### Input
+S1 = {1, 2}
 
+S2 = {2, 3, 4, 5}
+
+S3 = {6, 7, 8, 9, 10, 11, 12, 13}
+
+S4 = {1, 3, 5, 7, 9, 11, 13}
+
+S5 = {2, 4, 6, 8, 10, 12, 13}
+
+Let the cost of every set be same.
+
+##### Output
+
+The optimal solution is {S4, S5}
