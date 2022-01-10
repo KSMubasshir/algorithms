@@ -36,11 +36,14 @@ Kruskal’s Algorithm builds the spanning tree by adding edges one by one into a
 Given a universe U of n elements, a collection of subsets of U say S = {S1, S2…,Sm} where every subset Si has an associated cost. Find a minimum cost subcollection of S that covers all elements of U.
 ##### Input
   U = {1,2,3,4,5}
-   S = {S1,S2,S3}
+  
+  S = {S1,S2,S3}
    
-   S1 = {4,1,3},    Cost(S1) = 5
-   S2 = {2,5},      Cost(S2) = 10
-   S3 = {1,4,3,2},  Cost(S3) = 3
+  S1 = {4,1,3},    Cost(S1) = 5
+  
+  S2 = {2,5},      Cost(S2) = 10
+  
+  S3 = {1,4,3,2},  Cost(S3) = 3
 
 ##### Output
 Minimum cost of set cover is 13 and set cover is {S2, S3}
