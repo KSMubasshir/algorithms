@@ -83,7 +83,7 @@ Input is an array of unique characters along with their frequency of occurrences
 
 **Input**
 
-character   Frequency
+    character   Frequency
 
     a           5
     
@@ -99,7 +99,7 @@ character   Frequency
     
 **Output**
 
-character   code-word
+    character   code-word
 
     f          0
     
@@ -112,4 +112,4 @@ character   code-word
     b          1101
     
     e          111
-
+![output_huffman](images/output_huffman.jpg)
