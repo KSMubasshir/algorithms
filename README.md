@@ -5,6 +5,7 @@ Collections of Different Algorithms implemented in c++
 * Kruskal's Algorithm to find Minimum Spanning Tree
 * Set Cover Problem
 * Evaluation of Postfix Expression
+* Huffman Coding
 ## Description
 ### Skyline
 Given n rectangular buildings in a 2-dimensional city, computes the skyline of these buildings, eliminating hidden lines. 
@@ -67,4 +68,48 @@ Following is an algorithm for evaluation postfix expressions.
 Postfix expression: 53+62/*35*+
 ##### Output
 The result is: 39
+
+
+#### Huffman Coding
+Huffman coding is a lossless data compression algorithm. The idea is to assign variable-length codes to input characters, lengths of the assigned codes are based on the frequencies of corresponding characters. The most frequent character gets the smallest code and the least frequent character gets the largest code.
+**Steps to build Huffman Tree**
+Input is an array of unique characters along with their frequency of occurrences and output is Huffman Tree. 
+
+1. Create a leaf node for each unique character and build a min heap of all leaf nodes (Min Heap is used as a priority queue. The value of frequency field is used to compare two nodes in min heap. Initially, the least frequent character is at root)
+2. Extract two nodes with the minimum frequency from the min heap.
+ 
+3. Create a new internal node with a frequency equal to the sum of the two nodes frequencies. Make the first extracted node as its left child and the other extracted node as its right child. Add this node to the min heap.
+4. Repeat steps#2 and #3 until the heap contains only one node. The remaining node is the root node and the tree is complete.
+
+**Input**
+
+character   Frequency
+
+    a           5
+    
+    b           9
+    
+    c           12
+    
+    d           13
+    
+    e           16
+    
+    f           45
+    
+**Output**
+
+character   code-word
+
+    f          0
+    
+    c          100
+    
+    d          101
+    
+    a          1100
+    
+    b          1101
+    
+    e          111
 
